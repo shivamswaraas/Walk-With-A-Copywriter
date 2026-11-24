@@ -1,0 +1,1813 @@
+<!--
+  =============================================================================
+  © 2026 SHIVAM SWARAAS (SHIVAM PRATEEK). ALL RIGHTS RESERVED.
+  Original Concept, Narrative Architecture, Copywriting & Code: Shivam Swaraas.
+  Unauthorized copying, redistribution, scraping, or commercial reuse of this
+  source code, storyboard structure, or copy without written permission is
+  strictly prohibited.
+  Provenance ID: SS-UNKNOWN-2026-V1 // https://linkedin.com/in/shivamswaraas
+  =============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en" data-author="Shivam Swaraas" data-provenance="SS-UNKNOWN-2026">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Swaraas — Watch Me Build a Brand From Zero</title>
+  <meta name="author" content="Shivam Swaraas" />
+  <meta name="copyright" content="© 2026 Shivam Swaraas. All rights reserved." />
+  <meta name="description" content="Don't take my word for it. Watch a copywriter and brand strategist turn a ₹140 plain ceramic mug into a ₹2,500 cult object—step by step." />
+  <meta property="og:title" content="Don't take my word for it. Watch me build a brand from zero." />
+  <meta property="og:description" content="A live 9-phase walkthrough of how brand psychology, positioning, and conversion copy actually work—by Shivam Swaraas." />
+  <meta property="og:type" content="website" />
+  <!-- Optional: replace with a 1200x630 hosted preview image for LinkedIn/WhatsApp link cards -->
+  <meta property="og:image" content="https://raw.githubusercontent.com/shivamswaraas/Images/refs/heads/main/Cinematic%20Monochrome%20Contemplative%20Portrait.png?raw=true" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "The Unknown Mug Transformation — Brand Architecture Walkthrough",
+    "author": {
+      "@type": "Person",
+      "name": "Shivam Swaraas",
+      "alternateName": "Shivam Prateek",
+      "url": "https://linkedin.com/in/shivamswaraas",
+      "email": "mailto:ShivamSwaraas@Gmail.com"
+    },
+    "copyrightHolder": {
+      "@type": "Person",
+      "name": "Shivam Swaraas"
+    },
+    "copyrightYear": 2026
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --grid: #E4E5EC;
+      --ink: #111111;
+      --muted: #52525B;
+      --cobalt: #1D4ED8;
+      --pine: #0C1E19;
+      --pine-deep: #071310;
+      --ivory: #F5F1E8;
+      --manila: #F6F1E7;
+      --manila-b: #E1D8C5;
+      --champagne: #E5C185;
+      --vermilion: #E0462B;
+      --line: #DCDCE3;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--white);
+      background-image:
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+      background-size: 32px 32px;
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      padding-bottom: 84px;
+    }
+
+    /* Fixed Editorial Top Bar */
+    .top-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 80;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px clamp(18px, 4vw, 44px);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+    }
+    .top-bar.dark-mode {
+      background: rgba(12, 30, 25, 0.9);
+      border-color: rgba(245, 241, 232, 0.14);
+      color: var(--ivory);
+    }
+    .brand-mark {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      display: flex; align-items: center; gap: 10px;
+      user-select: none;
+    }
+    .brand-mark span.sep { opacity: 0.35; }
+    .skip-btn {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase;
+      text-decoration: none; color: inherit;
+      border: 1px solid currentColor; padding: 6px 12px;
+      transition: all 0.2s ease;
+    }
+    .skip-btn:hover { background: var(--vermilion); border-color: var(--vermilion); color: var(--white); }
+
+    /* Persistent Bottom 9-Phase Tracker */
+    .phase-hud {
+      position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+      z-index: 85; display: flex; align-items: center; gap: 16px;
+      background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(10px);
+      border: 1px solid var(--line); padding: 9px 16px;
+      box-shadow: 0 12px 32px rgba(8, 16, 14, 0.1);
+      max-width: 94vw; user-select: none;
+    }
+    .hud-dots { display: flex; align-items: center; gap: 7px; }
+    .hud-dot {
+      width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid #A1A1AA;
+      background: transparent; cursor: pointer; padding: 0;
+      transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .hud-dot:hover { border-color: var(--ink); transform: scale(1.25); }
+    .hud-dot.passed { background: var(--pine); border-color: var(--pine); opacity: 0.45; }
+    .hud-dot.active { background: var(--vermilion); border-color: var(--vermilion); transform: scale(1.25); opacity: 1; }
+    .hud-label {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink);
+      white-space: nowrap;
+    }
+
+    /* Typography & Reveal Mechanics */
+    .mono-tag {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
+      letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .mono-tag::before { content: ""; width: 16px; height: 1.5px; background: var(--vermilion); display: inline-block; }
+    .serif-h {
+      font-family: 'Instrument Serif', serif; font-weight: 400;
+      line-height: 1.06; letter-spacing: -0.015em;
+    }
+    .tight-h {
+      font-family: 'Inter Tight', sans-serif; font-weight: 600;
+      line-height: 1.12; letter-spacing: -0.025em;
+    }
+    .lead { font-size: clamp(15px, 1.35vw, 17px); line-height: 1.62; color: #27272A; }
+    .hand-note {
+      font-family: 'Caveat', cursive; font-size: clamp(20px, 2vw, 24px);
+      line-height: 1.2; display: inline-flex; align-items: flex-start; gap: 6px;
+    }
+    .hand-vermilion { color: var(--vermilion); }
+    .hand-cobalt { color: var(--cobalt); }
+    .reveal {
+      opacity: 0; transform: translateY(22px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       SCULPTURAL CSS MUG COMPONENT (4 EVOLUTION STATES + BASE FLIP)
+       ============================================================ */
+    .mug-stage {
+      position: relative; width: 220px; height: 220px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto; user-select: none;
+    }
+    .mug-halo {
+      position: absolute; inset: -18px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(229, 193, 133, 0.32) 0%, rgba(229, 193, 133, 0) 68%);
+      opacity: 0; transform: scale(0.8);
+      transition: opacity 1s ease, transform 1s ease;
+      pointer-events: none;
+    }
+    .mug-stage.state-cult .mug-halo { opacity: 1; transform: scale(1.1); }
+
+    .mug-vessel {
+      position: relative; width: 132px; height: 146px;
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+    }
+    .mug-stage.flipped .mug-vessel { transform: scale(0.7) rotateX(65deg); opacity: 0; pointer-events: none; }
+
+    /* Ceramic Handle */
+    .mug-handle {
+      position: absolute; right: -34px; top: 30px; width: 44px; height: 76px;
+      border-radius: 0 28px 28px 0;
+      border: 13px solid #E2E3E8; border-left: none;
+      box-shadow: inset -3px 0 6px rgba(0,0,0,0.12), 4px 6px 14px rgba(0,0,0,0.08);
+      transition: border-color 0.85s ease, box-shadow 0.85s ease;
+    }
+    /* Cylinder Body */
+    .mug-body {
+      position: relative; width: 100%; height: 100%; z-index: 2;
+      border-radius: 10px 10px 24px 24px / 6px 6px 20px 20px;
+      background: linear-gradient(100deg, #F2F3F6 0%, #FFFFFF 22%, #ECEEF2 52%, #D4D6DE 84%, #C2C5CF 100%);
+      box-shadow:
+        inset 0 -10px 18px rgba(0,0,0,0.08),
+        inset 12px 0 22px rgba(255,255,255,0.65),
+        0 20px 32px -12px rgba(10, 18, 15, 0.25);
+      transition: background 0.9s ease, box-shadow 0.9s ease;
+      overflow: hidden;
+    }
+    /* Specular Gloss Sheen (fades out when switching to matte glaze) */
+    .mug-body::after {
+      content: ""; position: absolute; top: 14px; bottom: 16px; left: 22px; width: 18px;
+      border-radius: 20px;
+      background: linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.05));
+      filter: blur(2px);
+      transition: opacity 0.85s ease;
+    }
+    /* Top Elliptical Rim & Interior */
+    .mug-rim {
+      position: absolute; top: -8px; left: 0; width: 100%; height: 22px; z-index: 3;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at 50% 62%, #D1D3DB 0%, #E7E8EE 58%, #FFFFFF 100%);
+      border: 2px solid #F7F8FA;
+      box-shadow: inset 0 5px 10px rgba(0,0,0,0.14);
+      transition: all 0.85s ease;
+    }
+    /* Cast Desk Shadow */
+    .mug-shadow {
+      position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%);
+      width: 144px; height: 22px; border-radius: 50%; z-index: 0;
+      background: radial-gradient(ellipse, rgba(12, 22, 18, 0.26) 0%, rgba(12, 22, 18, 0) 72%);
+      transition: background 0.85s ease;
+    }
+
+    /* STATE 2: Warm Matte Slate (Phase 04) */
+    .mug-stage.state-slate .mug-body {
+      background: linear-gradient(100deg, #7C827F 0%, #949A97 24%, #6D7370 58%, #4C524F 88%, #3B403E 100%);
+      box-shadow: inset 0 -10px 18px rgba(0,0,0,0.22), 0 22px 34px -10px rgba(10,18,15,0.3);
+    }
+    .mug-stage.state-slate .mug-body::after { opacity: 0.14; }
+    .mug-stage.state-slate .mug-handle { border-color: #545A57; }
+    .mug-stage.state-slate .mug-rim {
+      background: radial-gradient(ellipse at 50% 62%, #2B302E 0%, #4E5451 65%, #848A87 100%);
+      border-color: #8E9491;
+    }
+
+    /* STATE 3: Deep Matte Charcoal + Fine Champagne Rim (Phase 05-06) */
+    .mug-stage.state-charcoal .mug-body {
+      background: linear-gradient(100deg, #272D2B 0%, #38403D 22%, #1D2220 56%, #111514 86%, #0B0E0D 100%);
+      box-shadow: inset 0 -12px 22px rgba(0,0,0,0.45), 0 24px 38px -10px rgba(5,12,10,0.45);
+    }
+    .mug-stage.state-charcoal .mug-body::after { opacity: 0.08; }
+    .mug-stage.state-charcoal .mug-handle { border-color: #1A1F1D; }
+    .mug-stage.state-charcoal .mug-rim {
+      background: radial-gradient(ellipse at 50% 65%, #070908 0%, #171B1A 70%, #272D2B 100%);
+      border: 2px solid var(--champagne);
+      box-shadow: inset 0 6px 12px rgba(0,0,0,0.7), 0 0 8px rgba(229, 193, 133, 0.25);
+    }
+
+    /* STATE 4: Deep Obsidian-Pine Cult Edition + Steam (Phase 09) */
+    .mug-stage.state-cult .mug-body {
+      background: linear-gradient(100deg, #13251F 0%, #1F3930 22%, #0D1B16 55%, #07100D 86%, #040907 100%);
+      box-shadow: inset 0 -12px 24px rgba(0,0,0,0.6), 0 28px 50px -8px rgba(0, 0, 0, 0.72);
+    }
+    .mug-stage.state-cult .mug-body::after { opacity: 0.1; }
+    .mug-stage.state-cult .mug-handle { border-color: #0E1D18; }
+    .mug-stage.state-cult .mug-rim {
+      background: radial-gradient(ellipse at 50% 65%, #030706 0%, #0D1C17 72%, #1D332B 100%);
+      border: 2px solid var(--champagne);
+      box-shadow: inset 0 6px 14px rgba(0,0,0,0.85), 0 0 14px rgba(229, 193, 133, 0.4);
+    }
+    .mug-stage.state-cult .mug-shadow {
+      background: radial-gradient(ellipse, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0) 74%);
+    }
+
+    /* Rising Steam Wisps (Only visible in Cult State) */
+    .steam-wrap {
+      position: absolute; top: -54px; left: 50%; transform: translateX(-50%);
+      width: 90px; height: 64px; pointer-events: none;
+      opacity: 0; transition: opacity 1s ease;
+    }
+    .mug-stage.state-cult:not(.flipped) .steam-wrap { opacity: 1; }
+    .steam-path {
+      fill: none; stroke: var(--champagne); stroke-width: 1.8; stroke-linecap: round;
+      opacity: 0; animation: steamRise 4.2s ease-in-out infinite;
+    }
+    .steam-path.s2 { animation-delay: 1.8s; stroke-width: 1.4; }
+    @keyframes steamRise {
+      0% { transform: translateY(14px) scaleX(0.95); opacity: 0; }
+      30% { opacity: 0.45; }
+      70% { opacity: 0.25; }
+      100% { transform: translateY(-20px) scaleX(1.08); opacity: 0; }
+    }
+
+    /* Underside Ceramic Base Stamp View (Hidden Logo Reveal) */
+    .mug-base-view {
+      position: absolute; width: 146px; height: 146px; border-radius: 50%;
+      background: radial-gradient(circle at 38% 34%, #253630 0%, #101C18 65%, #070E0B 100%);
+      border: 5px solid #2A3833;
+      box-shadow:
+        inset 0 0 0 8px rgba(229, 193, 133, 0.08),
+        inset 0 8px 18px rgba(0,0,0,0.65),
+        0 20px 36px rgba(0,0,0,0.35);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+      opacity: 0; transform: scale(0.75) rotate(-14deg); pointer-events: none;
+      transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      text-align: center;
+    }
+    .mug-stage.flipped .mug-base-view { opacity: 1; transform: scale(1) rotate(0deg); pointer-events: auto; }
+    .base-ring {
+      width: 112px; height: 112px; border-radius: 50%;
+      border: 1px dashed rgba(229, 193, 133, 0.35);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    }
+    .base-brand {
+      font-family: 'Instrument Serif', serif; font-size: 20px; letter-spacing: 0.14em;
+      color: var(--champagne); text-transform: uppercase; padding-left: 0.14em;
+    }
+    .base-serial {
+      font-family: 'IBM Plex Mono', monospace; font-size: 8.5px;
+      letter-spacing: 0.1em; color: rgba(245, 241, 232, 0.65); text-transform: uppercase;
+    }
+
+    /* ============================================================
+       COLD OPEN
+       ============================================================ */
+    .cold-open {
+      min-height: 100vh; padding: 96px clamp(20px, 5vw, 56px) 84px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; position: relative;
+    }
+    .cold-kicker {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .cold-line-1 {
+      font-family: 'Instrument Serif', serif; font-size: clamp(1.85rem, 3.8vw, 3.1rem);
+      color: var(--muted); line-height: 1.1; margin-bottom: 8px;
+      opacity: 0; transform: translateY(14px);
+      animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+    }
+    .cold-line-2 {
+      font-family: 'Instrument Serif', serif; font-size: clamp(2.55rem, 6vw, 4.9rem);
+      color: var(--ink); line-height: 0.98; letter-spacing: -0.02em; max-width: 14ch;
+      opacity: 0; transform: translateY(18px);
+      animation: fadeUp 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.85s forwards;
+    }
+    .cold-line-2 em { font-style: italic; color: var(--cobalt); }
+    .cold-mug-wrap {
+      margin: 44px 0 28px;
+      opacity: 0; transform: translateY(20px);
+      animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 1.35s forwards;
+    }
+    .cold-specs {
+      font-family: 'IBM Plex Mono', monospace; font-size: clamp(11px, 1.2vw, 12.5px);
+      line-height: 1.85; color: var(--muted); letter-spacing: 0.04em;
+      background: rgba(255, 255, 255, 0.88); border: 1px solid var(--line);
+      padding: 14px 24px;
+      opacity: 0; animation: fadeUp 0.9s ease 1.75s forwards;
+    }
+    .cold-specs strong { color: var(--ink); font-weight: 500; }
+    .scroll-cue {
+      margin-top: 32px; font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--vermilion);
+      text-decoration: none; display: inline-flex; flex-direction: column; align-items: center; gap: 6px;
+      opacity: 0; animation: fadeUp 0.9s ease 2.1s forwards;
+    }
+    .scroll-cue span.arrow { animation: bob 1.8s ease-in-out infinite; font-size: 14px; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+    /* ============================================================
+       STUDIO SPLIT LAYOUT (PHASES 01 - 06)
+       ============================================================ */
+    .studio-shell {
+      max-width: 1260px; margin: 0 auto;
+      padding: 0 clamp(18px, 4vw, 48px);
+      display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: clamp(32px, 5vw, 72px);
+      align-items: start;
+    }
+    .studio-sticky-col {
+      position: sticky; top: 92px;
+      background: rgba(255, 255, 255, 0.94); border: 1px solid var(--line);
+      padding: 26px 22px 22px;
+      box-shadow: 0 18px 44px rgba(8, 16, 14, 0.05);
+      display: flex; flex-direction: column; align-items: center; gap: 18px;
+    }
+    .monitor-head {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      font-family: 'IBM Plex Mono', monospace; font-size: 9.5px;
+      letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted);
+      padding-bottom: 10px; border-bottom: 1px solid var(--line);
+    }
+    .monitor-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--vermilion); display: inline-block; margin-right: 6px; }
+    .monitor-meta {
+      width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      border-top: 1px solid var(--line); padding-top: 14px;
+    }
+    .m-stat { background: #FAFAFC; border: 1px solid var(--line); padding: 9px 10px; }
+    .m-stat-k { font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .m-stat-v { font-family: 'Inter Tight', sans-serif; font-size: 14px; font-weight: 600; color: var(--ink); margin-top: 2px; }
+    .flip-toggle-btn {
+      width: 100%; font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--pine); color: var(--ivory); border: none;
+      padding: 10px 12px; cursor: pointer; display: none;
+      transition: background 0.2s ease;
+    }
+    .flip-toggle-btn:hover { background: var(--cobalt); }
+    .flip-toggle-btn.unlocked { display: block; }
+    .monitor-caption {
+      font-size: 12px; line-height: 1.48; color: var(--muted); text-align: center;
+      min-height: 36px;
+    }
+
+    /* Mobile Compact Evolution Strip */
+    .mobile-mug-bar {
+      display: none; position: sticky; top: 53px; z-index: 70;
+      background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line); padding: 9px 18px;
+      justify-content: space-between; align-items: center;
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em;
+    }
+    .mobile-swatch {
+      width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid #C4C5CE;
+      display: inline-block; vertical-align: middle; margin-right: 8px;
+      transition: background 0.5s ease, border-color 0.5s ease;
+    }
+
+    .phase-block {
+      padding: clamp(64px, 10vh, 112px) 0;
+      border-bottom: 1px solid var(--line);
+      display: flex; flex-direction: column; gap: 24px;
+    }
+    .phase-block:last-child { border-bottom: none; }
+    .phase-title { font-size: clamp(2rem, 3.6vw, 3rem); color: var(--ink); }
+
+    /* Phase 01: Client Brief Card */
+    .brief-card {
+      background: var(--manila); border: 1px solid var(--manila-b);
+      padding: clamp(20px, 3vw, 30px);
+      box-shadow: 0 14px 34px rgba(12, 22, 18, 0.05);
+      font-family: 'IBM Plex Mono', monospace; font-size: 12.5px;
+    }
+    .brief-head {
+      display: flex; justify-content: space-between; padding-bottom: 12px;
+      margin-bottom: 16px; border-bottom: 1px dashed #C7BCA7;
+      color: var(--muted); font-size: 10.5px; letter-spacing: 0.09em;
+    }
+    .brief-row {
+      display: grid; grid-template-columns: 112px 1fr; gap: 12px;
+      padding: 7px 0; border-bottom: 1px solid rgba(200, 190, 170, 0.45);
+      align-items: baseline;
+    }
+    .brief-row:last-child { border-bottom: none; }
+    .brief-k { color: var(--muted); font-size: 11px; text-transform: uppercase; }
+    .brief-v { color: var(--ink); line-height: 1.5; }
+    .flag-hl {
+      background: rgba(224, 70, 43, 0.12); border-bottom: 2px solid var(--vermilion);
+      padding: 1px 4px; color: var(--ink); font-weight: 500;
+    }
+    .flag-note {
+      display: block; font-family: 'Caveat', cursive; font-size: 20px;
+      color: var(--vermilion); margin-top: 4px; line-height: 1.15;
+    }
+    .callout-question {
+      font-family: 'Instrument Serif', serif; font-style: italic;
+      font-size: clamp(1.55rem, 2.7vw, 2.25rem); line-height: 1.2;
+      color: var(--pine); border-left: 3px solid var(--cobalt);
+      padding: 8px 0 8px 20px; margin-top: 6px;
+    }
+
+    /* Phase 02: Demographics vs Psychographics */
+    .demo-trap {
+      background: #FFF7F5; border: 1px solid rgba(224, 70, 43, 0.35);
+      padding: 18px 20px; display: flex; flex-wrap: wrap;
+      justify-content: space-between; align-items: center; gap: 14px;
+    }
+    .demo-strike {
+      font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: #71717A;
+      text-decoration: line-through; text-decoration-color: rgba(224, 70, 43, 0.7);
+    }
+    .demo-warn {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
+      background: var(--vermilion); color: var(--white); padding: 4px 10px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .persona-grid { display: grid; gap: 14px; }
+    .persona-card {
+      background: var(--white); border: 1px solid var(--line);
+      padding: 20px 22px; box-shadow: 0 8px 22px rgba(0,0,0,0.03);
+    }
+    .persona-top {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid var(--line);
+    }
+    .persona-name { font-family: 'Inter Tight', sans-serif; font-size: 17px; font-weight: 700; }
+    .persona-num { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--cobalt); letter-spacing: 0.08em; }
+    .persona-list { list-style: none; display: grid; gap: 6px; font-size: 13.5px; color: #3F3F46; line-height: 1.5; margin-bottom: 12px; }
+    .persona-list li::before { content: "— "; color: var(--cobalt); font-weight: 600; }
+    .persona-verdict {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+      padding-top: 10px; border-top: 1px dashed var(--line); font-size: 12.5px; line-height: 1.45;
+    }
+    .persona-verdict b {
+      display: block; font-family: 'IBM Plex Mono', monospace; font-size: 9.5px;
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 2px;
+    }
+
+    /* Phase 03: Competitor Wall & 2x2 Gap Matrix */
+    .comp-wall { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .comp-card {
+      background: rgba(254, 245, 243, 0.72); border: 1px solid rgba(224, 70, 43, 0.22);
+      padding: 13px 14px; opacity: 0.82;
+    }
+    .comp-card p { font-family: 'Inter Tight', sans-serif; font-size: 13.5px; font-weight: 500; color: #52525B; line-height: 1.3; margin-bottom: 8px; }
+    .comp-meta { display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #71717A; }
+    .cliche-cloud {
+      display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+      padding: 12px 14px; background: #F4F4F6; border: 1px solid var(--line);
+    }
+    .cliche-pill {
+      font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #71717A;
+      text-decoration: line-through; background: var(--white); border: 1px solid var(--line); padding: 4px 9px;
+    }
+    .matrix-wrap {
+      background: var(--white); border: 1px solid var(--line);
+      padding: 26px 22px 22px; position: relative;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.03);
+    }
+    .matrix-axis-top, .matrix-axis-bottom {
+      text-align: center; font-family: 'IBM Plex Mono', monospace;
+      font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+    }
+    .matrix-axis-top { margin-bottom: 10px; }
+    .matrix-axis-bottom { margin-top: 10px; }
+    .matrix-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+      background: var(--line); border: 1px solid var(--line);
+    }
+    .quad { background: var(--white); padding: 18px 16px; min-height: 112px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+    .quad-k { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .quad h4 { font-family: 'Inter Tight', sans-serif; font-size: 14.5px; font-weight: 600; color: #3F3F46; }
+    .quad p { font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .quad-gap {
+      background: linear-gradient(135deg, #EFF5FF 0%, #FFFFFF 100%);
+      outline: 2px solid var(--cobalt); outline-offset: -2px; position: relative;
+    }
+    .quad-gap .quad-k { color: var(--cobalt); font-weight: 500; }
+    .quad-gap h4 { color: var(--ink); }
+    .gap-pulse {
+      position: absolute; top: 12px; right: 12px; width: 10px; height: 10px;
+      border-radius: 50%; background: var(--cobalt);
+      box-shadow: 0 0 0 0 rgba(29, 78, 216, 0.5);
+      animation: pulseRing 2s infinite;
+    }
+    @keyframes pulseRing { 70% { box-shadow: 0 0 0 10px rgba(29, 78, 216, 0); } 100% { box-shadow: 0 0 0 0 rgba(29, 78, 216, 0); } }
+
+    /* Phase 04: Positioning Blocks */
+    .strat-stack { display: grid; gap: 14px; }
+    .strat-card { padding: 20px 22px; background: var(--white); border: 1px solid var(--line); }
+    .strat-enemy { border-left: 4px solid var(--vermilion); }
+    .strat-belief { border-left: 4px solid var(--cobalt); }
+    .strat-anchor { background: var(--pine); color: var(--ivory); border-color: var(--pine); }
+    .strat-k { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+    .strat-enemy .strat-k { color: var(--vermilion); }
+    .strat-belief .strat-k { color: var(--cobalt); }
+    .strat-anchor .strat-k { color: var(--champagne); }
+    .strat-card h3 { font-family: 'Inter Tight', sans-serif; font-size: 19px; font-weight: 600; margin-bottom: 6px; line-height: 1.25; }
+    .strat-card p { font-size: 14px; line-height: 1.58; opacity: 0.88; }
+
+    /* Phase 05: Brand Identity */
+    .name-sheet {
+      background: var(--white); border: 1px solid var(--line); padding: 20px 22px;
+      font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; display: grid; gap: 10px;
+    }
+    .name-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; padding-bottom: 8px; border-bottom: 1px dashed var(--line); }
+    .name-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .name-no { color: #A1A1AA; text-decoration: line-through; min-width: 170px; }
+    .name-why { color: var(--muted); font-family: 'Inter', sans-serif; font-size: 13px; }
+    .name-win {
+      background: var(--pine); color: var(--ivory); padding: 14px 16px; margin-top: 4px;
+      display: grid; gap: 6px;
+    }
+    .name-win-top { display: flex; justify-content: space-between; align-items: center; }
+    .name-win strong { font-family: 'Instrument Serif', serif; font-size: 26px; font-weight: 400; color: var(--champagne); letter-spacing: 0.04em; }
+    .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .voice-box { background: var(--white); border: 1px solid var(--line); padding: 18px; }
+    .voice-box h4 { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+    .voice-yes h4 { color: var(--cobalt); }
+    .voice-no h4 { color: var(--vermilion); }
+    .voice-box ul { list-style: none; display: grid; gap: 6px; font-size: 13.5px; color: #3F3F46; }
+    .voice-sample { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 13px; font-style: italic; color: var(--ink); }
+    .truth-banner {
+      background: var(--manila); border: 1px solid var(--manila-b);
+      padding: 28px 24px; text-align: center;
+    }
+    .truth-banner blockquote {
+      font-family: 'Instrument Serif', serif; font-size: clamp(1.9rem, 3.6vw, 2.85rem);
+      color: var(--ink); line-height: 1.08; margin-bottom: 10px;
+    }
+    .truth-meta { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+
+    /* Phase 06: Interactive 4-Pass Sentence Scalpel */
+    .scalpel-deck {
+      background: var(--white); border: 1px solid var(--line);
+      padding: clamp(20px, 3vw, 28px);
+      box-shadow: 0 14px 34px rgba(8, 16, 14, 0.05);
+    }
+    .pass-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .pass-btn {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em;
+      text-transform: uppercase; border: 1px solid var(--line); background: #F7F7FA;
+      color: var(--muted); padding: 7px 11px; cursor: pointer; transition: all 0.2s;
+    }
+    .pass-btn:hover { border-color: var(--ink); color: var(--ink); }
+    .pass-btn.active { background: var(--ink); border-color: var(--ink); color: var(--white); }
+    .scalpel-stage {
+      min-height: 148px; display: flex; flex-direction: column; justify-content: center;
+      padding: 20px; background: #FCFCFE; border: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+    .scalpel-copy {
+      font-family: 'Inter Tight', sans-serif; font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.55; color: var(--ink); transition: all 0.3s ease;
+    }
+    .scalpel-copy.final-truth {
+      font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 3.8vw, 3rem);
+      line-height: 1.08; color: var(--pine); text-align: center;
+    }
+    .cut {
+      color: #A1A1AA; text-decoration: line-through;
+      text-decoration-color: var(--vermilion); text-decoration-thickness: 2px;
+      background: rgba(224, 70, 43, 0.08); padding: 0 2px;
+    }
+    .scalpel-foot {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px;
+    }
+    .scalpel-note-box {
+      border-left: 2.5px solid var(--cobalt); padding-left: 14px; flex: 1; min-width: 220px;
+    }
+    .scalpel-count {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+      letter-spacing: 0.09em; text-transform: uppercase; color: var(--cobalt); display: block; margin-bottom: 2px;
+    }
+    .next-cut-btn {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.08em;
+      text-transform: uppercase; background: var(--vermilion); color: var(--white);
+      border: none; padding: 10px 16px; cursor: pointer; transition: background 0.2s;
+    }
+    .next-cut-btn:hover { background: var(--ink); }
+
+    /* ============================================================
+       PHASE 07: FULL-BLEED DEEP PINE WAR ROOM
+       ============================================================ */
+    .war-room {
+      background: var(--pine); color: var(--ivory);
+      padding: clamp(72px, 11vh, 120px) clamp(18px, 4vw, 48px);
+      position: relative; overflow: hidden;
+    }
+    .war-room::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        linear-gradient(to right, rgba(245, 241, 232, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(245, 241, 232, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .war-inner { max-width: 1180px; margin: 0 auto; position: relative; z-index: 2; display: flex; flex-direction: column; gap: 36px; }
+    .war-room .mono-tag { color: var(--champagne); }
+    .war-room .lead { color: rgba(245, 241, 232, 0.82); max-width: 68ch; }
+    .war-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: clamp(24px, 4vw, 44px); align-items: start; }
+
+    .kill-board {
+      background: rgba(7, 19, 16, 0.72); border: 1px solid rgba(245, 241, 232, 0.14);
+      padding: 24px; display: flex; flex-direction: column; gap: 16px;
+    }
+    .board-k {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.12em;
+      text-transform: uppercase; padding-bottom: 12px; border-bottom: 1px solid rgba(245, 241, 232, 0.14);
+    }
+    .kill-item { padding-bottom: 14px; border-bottom: 1px dashed rgba(245, 241, 232, 0.12); }
+    .kill-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .kill-title {
+      font-family: 'Inter Tight', sans-serif; font-size: 16px; font-weight: 500;
+      color: rgba(245, 241, 232, 0.65); text-decoration: line-through;
+      text-decoration-color: var(--vermilion); text-decoration-thickness: 2px;
+      margin-bottom: 4px;
+    }
+    .kill-why { font-size: 13px; line-height: 1.5; color: rgba(245, 241, 232, 0.72); }
+
+    .deploy-board {
+      background: var(--manila); color: var(--ink);
+      border: 1px solid var(--manila-b); padding: 24px;
+      box-shadow: 0 22px 54px rgba(0, 0, 0, 0.32);
+    }
+    .deploy-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+    .dep-tab {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.06em;
+      text-transform: uppercase; border: 1px solid var(--manila-b); background: var(--white);
+      color: var(--muted); padding: 7px 11px; cursor: pointer; transition: all 0.2s;
+    }
+    .dep-tab.active { background: var(--pine); border-color: var(--pine); color: var(--champagne); }
+    .dep-panel { display: none; }
+    .dep-panel.active { display: block; animation: fadeUp 0.35s ease; }
+    .mock-frame {
+      background: var(--white); border: 1px solid var(--line); padding: 24px;
+    }
+    .mock-hero-dark { background: var(--pine-deep); color: var(--ivory); border-color: var(--pine); }
+    .mock-k {
+      font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 12px; display: block;
+    }
+    .mock-hero-dark .mock-k { color: var(--champagne); }
+    .mock-cta {
+      display: inline-block; margin-top: 18px; font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+      border: 1px solid var(--champagne); color: var(--champagne); padding: 9px 16px;
+    }
+    .mock-email-subj {
+      font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--ink);
+      padding-bottom: 10px; margin-bottom: 14px; border-bottom: 1px solid var(--line);
+    }
+    .mock-body { font-size: 14px; line-height: 1.65; color: #27272A; display: grid; gap: 10px; }
+    .insert-card {
+      background: #EFE9DC; border: 1px solid #D3C8B2; padding: 26px 22px; text-align: center;
+    }
+
+    /* ============================================================
+       PHASE 08: THE COMPOUNDING SYSTEM
+       ============================================================ */
+    .system-band {
+      max-width: 1180px; margin: 0 auto;
+      padding: clamp(72px, 11vh, 116px) clamp(18px, 4vw, 48px);
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .sys-flow {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    }
+    .sys-node {
+      background: var(--white); border: 1px solid var(--line);
+      padding: 20px 18px; cursor: pointer; text-align: left;
+      transition: all 0.25s ease; display: flex; flex-direction: column; gap: 8px;
+      position: relative;
+    }
+    .sys-node:hover { border-color: var(--ink); transform: translateY(-2px); }
+    .sys-node.active { background: var(--pine); border-color: var(--pine); color: var(--ivory); }
+    .sys-num { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--vermilion); }
+    .sys-node.active .sys-num { color: var(--champagne); }
+    .sys-node h3 { font-family: 'Inter Tight', sans-serif; font-size: 18px; font-weight: 600; }
+    .sys-node p { font-size: 12.5px; line-height: 1.45; color: var(--muted); }
+    .sys-node.active p { color: rgba(245, 241, 232, 0.78); }
+
+    .sys-detail-box {
+      background: var(--white); border: 1px solid var(--line);
+      border-left: 4px solid var(--cobalt); padding: clamp(20px, 3vw, 28px);
+      box-shadow: 0 12px 30px rgba(8, 16, 14, 0.04);
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;
+    }
+    .sys-col h4 {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--cobalt); margin-bottom: 6px;
+    }
+    .sys-col p { font-size: 13.5px; line-height: 1.58; color: #3F3F46; }
+
+    /* ============================================================
+       PHASE 09: THE RESULT & FLAGSHIP CLOSE
+       ============================================================ */
+    .finale-band {
+      background: linear-gradient(180deg, var(--pine) 0%, var(--pine-deep) 100%);
+      color: var(--ivory);
+      padding: clamp(80px, 12vh, 130px) clamp(18px, 4vw, 48px) 96px;
+      position: relative;
+    }
+    .finale-inner {
+      max-width: 960px; margin: 0 auto;
+      display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px;
+    }
+    .finale-band .mono-tag { color: var(--champagne); }
+    .price-compare {
+      display: flex; align-items: baseline; justify-content: center; gap: 20px; flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .price-new { font-family: 'Instrument Serif', serif; font-size: clamp(3rem, 6vw, 4.6rem); color: var(--champagne); line-height: 1; }
+    .price-old {
+      font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: rgba(245, 241, 232, 0.45);
+      text-decoration: line-through; text-decoration-color: var(--vermilion);
+    }
+    .finale-flip-btn {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.1em;
+      text-transform: uppercase; background: transparent; color: var(--champagne);
+      border: 1px solid rgba(229, 193, 133, 0.45); padding: 9px 18px; cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .finale-flip-btn:hover { background: var(--champagne); color: var(--pine-deep); }
+    .finale-narration { max-width: 660px; display: grid; gap: 14px; }
+    .finale-narration p { font-size: clamp(16px, 1.8vw, 19px); line-height: 1.55; color: rgba(245, 241, 232, 0.86); }
+    .finale-punch {
+      font-family: 'Instrument Serif', serif; font-size: clamp(1.9rem, 3.6vw, 2.85rem);
+      line-height: 1.1; color: var(--ivory); margin-top: 6px;
+    }
+    .finale-punch em { color: var(--champagne); font-style: italic; }
+
+    /* Flagship Conversion Card */
+    .close-card {
+      width: 100%; max-width: 780px; margin-top: 28px; text-align: left;
+      background: var(--white); color: var(--ink);
+      background-image:
+        linear-gradient(to right, #ECECF3 1px, transparent 1px),
+        linear-gradient(to bottom, #ECECF3 1px, transparent 1px);
+      background-size: 28px 28px;
+      border: 1px solid #D3D4DE;
+      padding: clamp(24px, 4vw, 42px);
+      box-shadow: 0 32px 72px rgba(0, 0, 0, 0.42);
+      display: flex; flex-direction: column; gap: 22px;
+    }
+    .close-head {
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted);
+      padding-bottom: 12px; border-bottom: 1px solid var(--line);
+    }
+    .status-live { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); }
+    .dot-live { width: 7px; height: 7px; border-radius: 50%; background: var(--vermilion); }
+
+    .ledger-4 {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      background: var(--white); border: 1px solid var(--line);
+    }
+    .ledger-c { padding: 14px 12px; border-right: 1px solid var(--line); }
+    .ledger-c:last-child { border-right: none; }
+    .ledger-n { font-family: 'Inter Tight', sans-serif; font-size: clamp(18px, 2.2vw, 22px); font-weight: 700; color: var(--ink); }
+    .ledger-l { font-family: 'IBM Plex Mono', monospace; font-size: 8.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
+
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .diag-pill {
+      font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.04em;
+      background: var(--white); border: 1px solid #C8CAD4; color: var(--ink);
+      padding: 8px 13px; cursor: pointer; transition: all 0.2s;
+    }
+    .diag-pill:hover { border-color: var(--ink); }
+    .diag-pill.active { background: var(--pine); border-color: var(--pine); color: var(--ivory); }
+
+    .cta-btn {
+      display: inline-block; background: var(--vermilion); color: var(--white);
+      font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.09em;
+      text-transform: uppercase; text-decoration: none; padding: 15px 26px;
+      text-align: center; transition: background 0.2s, transform 0.2s;
+    }
+    .cta-btn:hover { background: var(--ink); transform: translateY(-2px); }
+
+    .signoff-row {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+      padding-top: 16px; border-top: 1px dashed var(--line);
+    }
+    .avatar-wrap { display: flex; align-items: center; gap: 12px; }
+    .mini-avatar {
+      width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: center 20%;
+      filter: grayscale(100%) contrast(1.18); border: 1.5px solid var(--pine); display: none;
+    }
+    .mini-avatar-fallback {
+      width: 44px; height: 44px; border-radius: 50%; background: var(--pine);
+      color: var(--champagne); font-family: 'Instrument Serif', serif; font-size: 17px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .sig-reveal {
+      height: 46px; width: auto; object-fit: contain;
+      clip-path: inset(0 100% 0 0);
+      transition: clip-path 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .sig-reveal.drawn { clip-path: inset(0 0 0 0); }
+    .sub-links { display: flex; flex-wrap: wrap; gap: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+    .sub-links a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
+    .close-motto {
+      font-family: 'Instrument Serif', serif; font-style: italic; font-size: 18px;
+      color: var(--muted); padding-top: 12px; border-top: 1px solid var(--line);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; align-items: center;
+    }
+    .copyright-line {
+      font-family: 'IBM Plex Mono', monospace; font-style: normal; font-size: 9.5px;
+      letter-spacing: 0.08em; text-transform: uppercase; color: #71717A;
+    }
+
+    /* ============================================================
+       RESPONSIVE BREAKPOINTS
+       ============================================================ */
+    @media (max-width: 960px) {
+      .studio-shell { grid-template-columns: 1fr; }
+      .studio-sticky-col { display: none; }
+      .mobile-mug-bar { display: flex; }
+      .war-grid { grid-template-columns: 1fr; }
+      .sys-flow { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .brand-mark .hide-sm { display: none; }
+      .brief-row { grid-template-columns: 1fr; gap: 4px; }
+      .comp-wall { grid-template-columns: repeat(2, 1fr); }
+      .voice-grid { grid-template-columns: 1fr; }
+      .persona-verdict { grid-template-columns: 1fr; }
+      .sys-flow { grid-template-columns: 1fr; }
+      .ledger-4 { grid-template-columns: repeat(2, 1fr); }
+      .ledger-c:nth-child(2) { border-right: none; }
+      .ledger-c:nth-child(1), .ledger-c:nth-child(2) { border-bottom: 1px solid var(--line); }
+      .hud-dots { display: none; }
+      .phase-hud { padding: 9px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FIXED TOP BAR -->
+  <header class="top-bar" id="topBar">
+    <div class="brand-mark">
+      <span>SHIVAM SWARAAS</span>
+      <span class="sep hide-sm">//</span>
+      <span class="hide-sm" style="opacity:0.65;">BRAND PSYCHOLOGY &amp; COPY</span>
+    </div>
+    <a href="#contact" class="skip-btn">Skip to Contact →</a>
+  </header>
+
+  <!-- PERSISTENT 9-PHASE TRACKER -->
+  <nav class="phase-hud" aria-label="Walkthrough phases">
+    <div class="hud-dots" id="hudDots">
+      <button class="hud-dot active" data-target="phase1" title="01 Raw Product"></button>
+      <button class="hud-dot" data-target="phase2" title="02 Audience"></button>
+      <button class="hud-dot" data-target="phase3" title="03 Landscape"></button>
+      <button class="hud-dot" data-target="phase4" title="04 Positioning"></button>
+      <button class="hud-dot" data-target="phase5" title="05 Identity"></button>
+      <button class="hud-dot" data-target="phase6" title="06 The Copy"></button>
+      <button class="hud-dot" data-target="phase7" title="07 Collateral"></button>
+      <button class="hud-dot" data-target="phase8" title="08 Full System"></button>
+      <button class="hud-dot" data-target="phase9" title="09 The Result"></button>
+    </div>
+    <div class="hud-label" id="hudLabel">00 / 09 // COLD OPEN</div>
+  </nav>
+
+  <!-- ============================================================
+       COLD OPEN
+       ============================================================ -->
+  <section class="cold-open" id="coldOpen" data-phase="0" data-label="00 / 09 // COLD OPEN">
+    <div class="cold-kicker">LIVE WALKTHROUGH // BRAND ARCHITECTURE FROM SCRATCH</div>
+    <p class="cold-line-1">Don’t take my word for it.</p>
+    <h1 class="cold-line-2">Watch me build a brand from <em>zero.</em></h1>
+
+    <div class="cold-mug-wrap">
+      <div class="mug-stage state-raw" aria-label="Plain white ₹140 ceramic mug">
+        <div class="mug-vessel">
+          <div class="mug-rim"></div>
+          <div class="mug-body"></div>
+          <div class="mug-handle"></div>
+          <div class="mug-shadow"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cold-specs">
+      <div>A <strong>₹140</strong> ceramic mug.</div>
+      <div>1,247 identical ones on Amazon.</div>
+      <div>Let’s make this one worth <strong>₹2,500.</strong></div>
+    </div>
+
+    <a href="#phase1" class="scroll-cue">
+      <span>Scroll to begin</span>
+      <span class="arrow">↓</span>
+    </a>
+  </section>
+
+  <!-- MOBILE LIVE OBJECT BAR (Visible <= 960px across Phases 01-06) -->
+  <div class="mobile-mug-bar" id="mobileBar">
+    <span><span class="mobile-swatch" id="mobileSwatch" style="background:#FFFFFF;"></span><strong id="mobileState">GLOSSY WHITE</strong></span>
+    <span id="mobilePrice" style="color:var(--cobalt);">₹349 MRP</span>
+  </div>
+
+  <!-- ============================================================
+       STUDIO SPLIT WORKSPACE (PHASES 01 - 06)
+       ============================================================ -->
+  <main class="studio-shell">
+
+    <!-- STICKY EVOLVING MUG MONITOR (Desktop) -->
+    <aside class="studio-sticky-col" aria-label="Live product evolution monitor">
+      <div class="monitor-head">
+        <span><span class="monitor-dot"></span>LIVE OBJECT</span>
+        <span id="monPhase">PHASE 01</span>
+      </div>
+
+      <div class="mug-stage state-raw" id="studioMug">
+        <div class="mug-halo"></div>
+        <div class="mug-vessel">
+          <div class="mug-rim"></div>
+          <div class="mug-body"></div>
+          <div class="mug-handle"></div>
+          <div class="mug-shadow"></div>
+        </div>
+        <div class="mug-base-view">
+          <div class="base-ring">
+            <span class="base-brand">Unknown</span>
+            <span class="base-serial">NO. 042 / 200</span>
+            <span class="base-serial" style="opacity:0.45;">KHURJA STONEWARE</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="flip-toggle-btn" id="studioFlipBtn" onclick="toggleMugFlip('studioMug', this)">
+        Flip to inspect hidden base ↻
+      </button>
+
+      <div class="monitor-meta">
+        <div class="m-stat">
+          <div class="m-stat-k">Finish</div>
+          <div class="m-stat-v" id="monFinish">Glossy White</div>
+        </div>
+        <div class="m-stat">
+          <div class="m-stat-k">Perceived Value</div>
+          <div class="m-stat-v" id="monPrice">₹349</div>
+        </div>
+      </div>
+
+      <p class="monitor-caption" id="monCaption">
+        No story. No enemy. Forced to compete strictly on price.
+      </p>
+    </aside>
+
+    <!-- RIGHT SCROLLING WORKFLOW (PHASES 01 - 06) -->
+    <div class="studio-content">
+
+      <!-- PHASE 01 -->
+      <section class="phase-block" id="phase1" data-phase="1" data-label="01 / 09 // THE RAW PRODUCT">
+        <span class="mono-tag">PHASE 01 // WHAT LANDS ON MY DESK</span>
+        <h2 class="serif-h phase-title">This is what 90% of product briefs look like.</h2>
+        <p class="lead">
+          "Premium quality." "For everyone." "Maybe some Instagram ads?" Three red flags in one paragraph.
+        </p>
+
+        <div class="brief-card reveal">
+          <div class="brief-head">
+            <span>CLIENT INTAKE BRIEF // #001</span>
+            <span>STATUS: RAW</span>
+          </div>
+          <div class="brief-row"><span class="brief-k">Product</span><span class="brief-v">Ceramic mug (Khurja stoneware, 300ml)</span></div>
+          <div class="brief-row"><span class="brief-k">Unit Cost</span><span class="brief-v">₹140 factory cost → ₹349 planned MRP</span></div>
+          <div class="brief-row">
+            <span class="brief-k">USP</span>
+            <span class="brief-v">
+              <span class="flag-hl">"Premium quality"</span>
+              <span class="flag-note">✎ Says nothing. Every seller claims this.</span>
+            </span>
+          </div>
+          <div class="brief-row">
+            <span class="brief-k">Target</span>
+            <span class="brief-v">
+              <span class="flag-hl">"Everyone"</span>
+              <span class="flag-note">✎ A product for everyone is a product for no one.</span>
+            </span>
+          </div>
+          <div class="brief-row">
+            <span class="brief-k">Client Note</span>
+            <span class="brief-v">
+              "We want to sell more mugs. <span class="flag-hl">Maybe some Instagram ads?</span>"
+              <span class="flag-note">✎ Tactics before strategy. The most expensive mistake in marketing.</span>
+            </span>
+          </div>
+        </div>
+
+        <p class="lead reveal">
+          <strong>The first thing I do is NOT start writing.</strong> I close the brief, pick up the mug, and ask the one question most founders skip:
+        </p>
+        <blockquote class="callout-question reveal">
+          “Why would someone choose THIS over 1,246 identical options—if they couldn’t compare price?”
+        </blockquote>
+      </section>
+
+      <!-- PHASE 02 -->
+      <section class="phase-block" id="phase2" data-phase="2" data-label="02 / 09 // THE AUDIENCE">
+        <span class="mono-tag">PHASE 02 // WHO ACTUALLY BUYS THIS</span>
+        <h2 class="serif-h phase-title">Demographics tell you who <em>can</em> buy. Psychographics tell you who <em>will.</em></h2>
+
+        <div class="demo-trap reveal">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--vermilion);margin-bottom:4px;">CLIENT'S DEMOGRAPHIC SHEET // REJECTED</div>
+            <div class="demo-strike">Age: 18–45 • Gender: All • Income: Middle-class+ • Interest: Coffee</div>
+          </div>
+          <span class="demo-warn">⚠ Describes 400M Indians</span>
+        </div>
+
+        <p class="lead reveal">
+          Notice that not one real buyer below is defined as a “coffee lover.” Nobody pays ₹2,500 for a mug because they like coffee. They pay it because of what the object quietly says about them.
+        </p>
+
+        <div class="persona-grid">
+          <article class="persona-card reveal">
+            <div class="persona-top">
+              <h3 class="persona-name">The Desk Curator</h3>
+              <span class="persona-num">PERSONA 01 // BEHAVIORAL</span>
+            </div>
+            <ul class="persona-list">
+              <li>Arranges their workspace before opening a single tab; owns four mugs, only reaches for one.</li>
+              <li>Has strong opinions about pen weight, keyboard sound, and desk lighting.</li>
+              <li>Photographs their desk setup—even when they never post it.</li>
+            </ul>
+            <div class="persona-verdict">
+              <div><b style="color:var(--cobalt);">Buys Because</b>Objects on their desk are extensions of identity.</div>
+              <div><b style="color:var(--vermilion);">Rejects</b>Anything mass-produced or “cute.”</div>
+            </div>
+          </article>
+
+          <article class="persona-card reveal">
+            <div class="persona-top">
+              <h3 class="persona-name">The Gift Agonizer</h3>
+              <span class="persona-num">PERSONA 02 // BEHAVIORAL</span>
+            </div>
+            <ul class="persona-list">
+              <li>Searches “gifts for people who have everything” at 11:47 PM.</li>
+              <li>Refuses to buy anything recognizable from a mall shelf.</li>
+              <li>Needs the gift to say “I get your taste” without a greeting card.</li>
+            </ul>
+            <div class="persona-verdict">
+              <div><b style="color:var(--cobalt);">Buys Because</b>The story behind the object <em>is</em> the gift.</div>
+              <div><b style="color:var(--vermilion);">Rejects</b>Generic gift boxes and discount tags.</div>
+            </div>
+          </article>
+
+          <article class="persona-card reveal">
+            <div class="persona-top">
+              <h3 class="persona-name">The Quiet Perfectionist</h3>
+              <span class="persona-num">PERSONA 03 // BEHAVIORAL</span>
+            </div>
+            <ul class="persona-list">
+              <li>Lives by “less, but better” and finds visible brand logos personally offensive.</li>
+              <li>Happily pays 10× for the definitive version of a mundane daily object.</li>
+            </ul>
+            <div class="persona-verdict">
+              <div><b style="color:var(--cobalt);">Buys Because</b>It doesn’t try to be interesting.</div>
+              <div><b style="color:var(--vermilion);">Rejects</b>Adjectives, slogans, and anything that “pops.”</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="hand-note hand-cobalt reveal">
+          <span>✎</span>
+          <span>The audience isn’t the person who drinks from it. It’s the person who chooses it.</span>
+        </div>
+      </section>
+
+      <!-- PHASE 03 -->
+      <section class="phase-block" id="phase3" data-phase="3" data-label="03 / 09 // COMPETITIVE LANDSCAPE">
+        <span class="mono-tag">PHASE 03 // WHAT EVERYONE ELSE IS SAYING</span>
+        <h2 class="serif-h phase-title">When everyone says “unique,” nobody is.</h2>
+        <p class="lead">
+          I audit 40+ competitor listings, landing pages, and bios before drafting a word. Every single one repeats the exact same five words.
+        </p>
+
+        <div class="comp-wall reveal">
+          <div class="comp-card"><p>“Premium ceramic mug”</p><div class="comp-meta"><span>₹399</span><span>★ 4.1</span></div></div>
+          <div class="comp-card"><p>“Artisanal mug for coffee lovers”</p><div class="comp-meta"><span>₹649</span><span>★ 4.3</span></div></div>
+          <div class="comp-card"><p>“Handcrafted with love”</p><div class="comp-meta"><span>₹899</span><span>★ 3.9</span></div></div>
+          <div class="comp-card"><p>“Eco-friendly sustainable mug”</p><div class="comp-meta"><span>₹549</span><span>★ 4.0</span></div></div>
+          <div class="comp-card"><p>“Minimalist designer mug”</p><div class="comp-meta"><span>₹799</span><span>★ 4.2</span></div></div>
+          <div class="comp-card"><p>“Luxury ceramic coffee set”</p><div class="comp-meta"><span>₹1,499</span><span>★ 4.1</span></div></div>
+        </div>
+
+        <div class="cliche-cloud reveal">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--vermilion);margin-right:4px;">BANNED WORDS:</span>
+          <span class="cliche-pill">Premium</span>
+          <span class="cliche-pill">Handcrafted</span>
+          <span class="cliche-pill">Artisanal</span>
+          <span class="cliche-pill">Coffee Lovers</span>
+          <span class="cliche-pill">Unique</span>
+        </div>
+
+        <div class="matrix-wrap reveal">
+          <div class="matrix-axis-top">↑ EMOTIONAL MEANING</div>
+          <div class="matrix-grid">
+            <div class="quad quad-gap">
+              <span class="gap-pulse"></span>
+              <span class="quad-k">THE EMPTY GAP // OUR HOME</span>
+              <h4>Emotional + Functional</h4>
+              <p>Deliberate daily utility carrying quiet meaning—without artisan fragility or designer logo ego.</p>
+            </div>
+            <div class="quad">
+              <span class="quad-k">CROWDED</span>
+              <h4>“Artisan” Ceramics</h4>
+              <p>Heavy backstory, inconsistent utility, fragile shelf-piece pricing.</p>
+            </div>
+            <div class="quad">
+              <span class="quad-k">PRICE WAR</span>
+              <h4>Amazon Generics</h4>
+              <p>Pure commodity. Zero memory. Cheapest seller wins.</p>
+            </div>
+            <div class="quad">
+              <span class="quad-k">LOUD EGO</span>
+              <h4>“Designer” Brands</h4>
+              <p>Oversized logos, trendy prints, built to signal price rather than taste.</p>
+            </div>
+          </div>
+          <div class="matrix-axis-bottom">↓ COMMODITY UTILITY</div>
+        </div>
+
+        <div class="hand-note hand-cobalt reveal">
+          <span>✎</span>
+          <span>Positioning isn’t what you say. It’s the space you occupy that nobody else does.</span>
+        </div>
+      </section>
+
+      <!-- PHASE 04 -->
+      <section class="phase-block" id="phase4" data-phase="4" data-label="04 / 09 // THE POSITIONING">
+        <span class="mono-tag">PHASE 04 // THE GAP. THE ANGLE. THE ENEMY.</span>
+        <h2 class="serif-h phase-title">Three decisions that dictate everything that follows.</h2>
+        <p class="lead">
+          Notice the mug on your left just dropped its generic gloss for warm matte slate. Strategy decides form before design begins.
+        </p>
+
+        <div class="strat-stack">
+          <div class="strat-card strat-enemy reveal">
+            <div class="strat-k">01 // THE ENEMY (CREATES TENSION)</div>
+            <h3>Not other mugs. Noise.</h3>
+            <p>Noisy desks. Noisy branding. “Quirky” motivational quotes screaming from ceramic walls. Every object on a desk either adds to the noise or cuts through it. We cut through it.</p>
+          </div>
+          <div class="strat-card strat-belief reveal">
+            <div class="strat-k">02 // THE BELIEF (CREATES GRAVITY)</div>
+            <h3>Restraint outlasts decoration.</h3>
+            <p>The tools you touch every morning should earn their place through quiet discipline. A mug doesn’t need a personality—it needs to respect yours.</p>
+          </div>
+          <div class="strat-card strat-anchor reveal">
+            <div class="strat-k">03 // THE POSITIONING ANCHOR</div>
+            <h3>Not the loudest object on your desk. The quietest.</h3>
+            <p>For people who curate their workspace the way others curate their wardrobe—a stoneware mug that earns its keep by staying completely out of your way.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHASE 05 -->
+      <section class="phase-block" id="phase5" data-phase="5" data-label="05 / 09 // BRAND IDENTITY">
+        <span class="mono-tag">PHASE 05 // NAME. VOICE. BELIEF SYSTEM.</span>
+        <h2 class="serif-h phase-title">The sharpest brands reward the person paying attention.</h2>
+        <p class="lead">
+          Persona 03 hates exterior logos—so we put zero branding on the side. Flip the mug on the left to see where the name actually lives.
+        </p>
+
+        <div class="name-sheet reveal">
+          <div style="font-size:10px;letter-spacing:0.1em;color:var(--muted);">NAME EXPLORATION // WORKING SHORTLIST</div>
+          <div class="name-row"><span class="name-no">✕ Quiet Ceramic Co.</span><span class="name-why">Too literal. Sounds like a gift-shop stall.</span></div>
+          <div class="name-row"><span class="name-no">✕ Deepwork™</span><span class="name-why">Borrowed productivity jargon. Feels like hustle culture.</span></div>
+          <div class="name-row"><span class="name-no">✕ Silo</span><span class="name-why">Taken across three categories.</span></div>
+          <div class="name-row"><span class="name-no">✕ Null</span><span class="name-why">Sounds like a software bug.</span></div>
+          <div class="name-win">
+            <div class="name-win-top">
+              <strong>✓ Unknown</strong>
+              <span style="font-size:10px;color:var(--champagne);letter-spacing:0.08em;">LOCKED // BASE-STAMPED ONLY</span>
+            </div>
+            <p style="font-family:'Inter',sans-serif;font-size:13.5px;line-height:1.55;color:rgba(245,241,232,0.86);">
+              Zero exterior logo. Stamped solely underneath the base. When someone on a video call asks <em>“What brand is that mug?”</em> and you answer <em>“Unknown”</em>—curiosity does the selling for you.
+            </p>
+          </div>
+        </div>
+
+        <div class="voice-grid reveal">
+          <div class="voice-box voice-yes">
+            <h4>✓ Sounds Like</h4>
+            <ul>
+              <li>• Confident, never loud</li>
+              <li>• Dry, observational wit</li>
+              <li>• Short, spare sentences</li>
+              <li>• Earns attention quietly</li>
+            </ul>
+            <p class="voice-sample">“Your desk is noisy enough.”</p>
+          </div>
+          <div class="voice-box voice-no">
+            <h4>✕ Never Sounds Like</h4>
+            <ul>
+              <li>• “Hey there! 😊”</li>
+              <li>• Exclamation marks</li>
+              <li>• Corporate third-person</li>
+              <li>• Adjective-stuffed fluff</li>
+            </ul>
+            <p class="voice-sample" style="color:#71717A;text-decoration:line-through;">“Our premium mug elevates modern professionals!”</p>
+          </div>
+        </div>
+
+        <div class="truth-banner reveal">
+          <blockquote>“Built for minds that hate noise.”</blockquote>
+          <div class="truth-meta">6 WORDS // Brand truth • Buyer self-selection • AI-citable • Zero wasted oxygen</div>
+        </div>
+      </section>
+
+      <!-- PHASE 06 -->
+      <section class="phase-block" id="phase6" data-phase="6" data-label="06 / 09 // THE SENTENCE SCALPEL">
+        <span class="mono-tag">PHASE 06 // THE ACTUAL CRAFT</span>
+        <h2 class="serif-h phase-title">Copywriting isn’t adding cleverness. It’s surgery.</h2>
+        <p class="lead">
+          Step through all four cuts below to watch a 45-word client draft get stripped down to the six words that sell the mug.
+        </p>
+
+        <div class="scalpel-deck reveal">
+          <div class="pass-tabs" id="passTabs">
+            <button class="pass-btn active" onclick="setPass(0)">Pass 0 // Draft</button>
+            <button class="pass-btn" onclick="setPass(1)">Pass 1 // Adjectives</button>
+            <button class="pass-btn" onclick="setPass(2)">Pass 2 // Categories</button>
+            <button class="pass-btn" onclick="setPass(3)">Pass 3 // Enemy</button>
+            <button class="pass-btn" onclick="setPass(4)">Pass 4 // Truth</button>
+          </div>
+
+          <div class="scalpel-stage">
+            <div class="scalpel-copy" id="scalpelCopy"></div>
+          </div>
+
+          <div class="scalpel-foot">
+            <div class="scalpel-note-box">
+              <span class="scalpel-count" id="scalpelCount">45 WORDS // CLIENT FIRST DRAFT</span>
+              <span class="hand-note hand-cobalt" id="scalpelNote" style="font-size:20px;">
+                This is what most brands publish. A buyer’s brain deletes it in 0.3 seconds.
+              </span>
+            </div>
+            <button class="next-cut-btn" id="nextCutBtn" onclick="nextPass()">Make Cut 01 →</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================================================
+       PHASE 07: FULL-BLEED DEEP PINE WAR ROOM
+       ============================================================ -->
+  <section class="war-room" id="phase7" data-phase="7" data-label="07 / 09 // COLLATERAL BLUEPRINT">
+    <div class="war-inner">
+      <div>
+        <span class="mono-tag">PHASE 07 // WHAT GETS BUILT — AND WHAT GETS KILLED</span>
+        <h2 class="serif-h phase-title" style="color:var(--ivory);margin-top:10px;">A brand isn’t one loud ad. It’s every door leading into the same room.</h2>
+        <p class="lead" style="margin-top:12px;">
+          Before writing deliverables, a strategist protects your capital by killing the expensive habits first. Inspect the live assets deployed instead.
+        </p>
+      </div>
+
+      <div class="war-grid">
+        <!-- KILLED COLUMN -->
+        <div class="kill-board reveal">
+          <div class="board-k" style="color:var(--vermilion);">✕ KILLED ON DAY ONE (BUDGET SAVED)</div>
+          <div class="kill-item">
+            <div class="kill-title">Day-1 Cold Instagram Ads</div>
+            <div class="kill-why">Paying rent to interrupt strangers who don’t trust you yet. Cold ads burn cash; psychology compounds.</div>
+          </div>
+          <div class="kill-item">
+            <div class="kill-title">“Best Mug Ever” Homepage Hero</div>
+            <div class="kill-why">Every competitor claims it. The human brain files it as background noise in 0.4 seconds.</div>
+          </div>
+          <div class="kill-item">
+            <div class="kill-title">Month-1 Influencer Unboxings</div>
+            <div class="kill-why">Borrowed credibility before you own your own voice. The spike dies when the 24-hour story expires.</div>
+          </div>
+          <div class="kill-item">
+            <div class="kill-title">“15% OFF” Launch Pop-Ups</div>
+            <div class="kill-why">Tells the market your ₹2,500 price was fake from minute one. You can never un-say a discount.</div>
+          </div>
+          <div class="kill-item">
+            <div class="kill-title">Amazon as Primary Channel</div>
+            <div class="kill-why">You cannot build belief on a marketplace specifically engineered to make buyers sort by lowest price.</div>
+          </div>
+        </div>
+
+        <!-- DEPLOYED LIVE DELIVERABLES -->
+        <div class="deploy-board reveal">
+          <div class="board-k" style="color:var(--pine);border-color:var(--manila-b);margin-bottom:14px;">✓ DEPLOYED INSTEAD // CLICK TO INSPECT LIVE COPY</div>
+          <div class="deploy-tabs">
+            <button class="dep-tab active" onclick="openDep(0, this)">01 Homepage</button>
+            <button class="dep-tab" onclick="openDep(1, this)">02 Email</button>
+            <button class="dep-tab" onclick="openDep(2, this)">03 Packaging</button>
+            <button class="dep-tab" onclick="openDep(3, this)">04 Founder Essay</button>
+          </div>
+
+          <div class="dep-panel active" id="dep0">
+            <div class="mock-frame mock-hero-dark">
+              <span class="mock-k">UNKNOWN // 5-SECOND HOMEPAGE HERO</span>
+              <h3 class="serif-h" style="font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--ivory);margin-bottom:12px;">Your desk is noisy enough.</h3>
+              <p style="font-size:14px;line-height:1.6;color:rgba(245,241,232,0.82);max-width:44ch;">
+                Heavyweight Khurja stoneware in matte obsidian. Zero exterior logo. Zero motivational quotes. Limited to 200 numbered pieces.
+              </p>
+              <span class="mock-cta">See the Weight — ₹2,500 →</span>
+            </div>
+          </div>
+
+          <div class="dep-panel" id="dep1">
+            <div class="mock-frame">
+              <span class="mock-k">POST-PURCHASE EMAIL // NO COUPON BRIBE</span>
+              <div class="mock-email-subj"><strong>Subject:</strong> It shipped. Don’t look for a logo.</div>
+              <div class="mock-body">
+                <p>You didn’t buy a mug. You bought forty quiet minutes before the pings start.</p>
+                <p>There is no logo printed on the outside, and there is no 10% off code for tagging us on Instagram. Turn it upside down when it arrives—that is the only place our name lives.</p>
+                <p>Heavy Khurja stoneware. Matte obsidian glaze. Built to absorb desk clutter instead of adding to it.</p>
+                <p><strong>Welcome to the quiet. — Unknown</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dep-panel" id="dep2">
+            <div class="insert-card">
+              <span class="mock-k">UNCOATED UNBLEACHED STOCK // INSIDE THE BOX</span>
+              <h3 class="serif-h" style="font-size:2rem;color:var(--pine);margin:10px 0 14px;">Put your phone face down.</h3>
+              <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);line-height:1.75;max-width:40ch;margin:0 auto;">
+                UNKNOWN // NO. 042 / 200<br>
+                300ML KHURJA STONEWARE • MATTE OBSIDIAN<br><br>
+                No hashtags required—though people in your meetings will ask where you got this.
+              </p>
+            </div>
+          </div>
+
+          <div class="dep-panel" id="dep3">
+            <div class="mock-frame">
+              <span class="mock-k">GHOSTWRITTEN LINKEDIN ESSAY // DAY-14 ORGANIC</span>
+              <div class="mock-body">
+                <p>I spent ₹14,000 last year on mugs I never used.</p>
+                <p>They were all fine. Good clay. Nice glaze. Decent price. But “fine” doesn’t survive the first drawer purge.</p>
+                <p>The one I kept has no logo, no slogan, and disappears into my desk instead of competing with my work. It doesn’t try to be interesting. It just stays out of my way.</p>
+                <p><strong>That is the entire product thesis.</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PHASE 08: THE COMPOUNDING SYSTEM
+       ============================================================ -->
+  <section class="system-band" id="phase8" data-phase="8" data-label="08 / 09 // THE COMPOUNDING SYSTEM">
+    <div>
+      <span class="mono-tag">PHASE 08 // HOW IT ALL CONNECTS</span>
+      <h2 class="serif-h phase-title" style="margin-top:10px;">This isn’t isolated marketing errands. It’s architecture.</h2>
+      <p class="lead" style="margin-top:10px;max-width:66ch;">
+        Click any stage of the flywheel below to see how search, AI citation, voice, and word-of-mouth reinforce each other without paid ad dependency.
+      </p>
+    </div>
+
+    <div class="sys-flow reveal">
+      <button class="sys-node active" onclick="selectSys(0, this)">
+        <span class="sys-num">01 // DISCOVERY</span>
+        <h3>High-Intent Capture</h3>
+        <p>SEO, AEO, GEO &amp; zero-pitch organic essays bring buyers in with wallets open.</p>
+      </button>
+      <button class="sys-node" onclick="selectSys(1, this)">
+        <span class="sys-num">02 // BELIEF</span>
+        <h3>The 5-Second Filter</h3>
+        <p>Desire-first pages repel bargain hunters and lock in the three personas.</p>
+      </button>
+      <button class="sys-node" onclick="selectSys(2, this)">
+        <span class="sys-num">03 // CONVERSION</span>
+        <h3>Restraint Checkout</h3>
+        <p>Story-consistent CTAs and honest batch numbers—zero fake countdown timers.</p>
+      </button>
+      <button class="sys-node" onclick="selectSys(3, this)">
+        <span class="sys-num">04 // ADVOCACY</span>
+        <h3>The Curiosity Loop</h3>
+        <p>The logo-free object gets asked about on calls—turning buyers into storytellers.</p>
+      </button>
+    </div>
+
+    <div class="sys-detail-box reveal" id="sysDetail"></div>
+
+    <div class="hand-note hand-cobalt reveal">
+      <span>✎</span>
+      <span>Paid ads rent attention. Brand psychology builds equity—every month this system runs, your next customer gets cheaper.</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PHASE 09: THE RESULT & FLAGSHIP CONVERSION CARD
+       ============================================================ -->
+  <section class="finale-band" id="phase9" data-phase="9" data-label="09 / 09 // SAME CLAY. DIFFERENT UNIVERSE.">
+    <div class="finale-inner">
+      <span class="mono-tag">PHASE 09 // SAME CLAY. DIFFERENT UNIVERSE.</span>
+
+      <div class="mug-stage state-cult reveal" id="finaleMug" style="margin:26px auto 12px;">
+        <div class="mug-halo"></div>
+        <div class="steam-wrap" aria-hidden="true">
+          <svg viewBox="0 0 90 64" width="90" height="64">
+            <path class="steam-path" d="M34 56 C 28 40, 44 30, 36 10" />
+            <path class="steam-path s2" d="M56 58 C 62 42, 46 32, 54 12" />
+          </svg>
+        </div>
+        <div class="mug-vessel">
+          <div class="mug-rim"></div>
+          <div class="mug-body"></div>
+          <div class="mug-handle"></div>
+          <div class="mug-shadow"></div>
+        </div>
+        <div class="mug-base-view">
+          <div class="base-ring">
+            <span class="base-brand">Unknown</span>
+            <span class="base-serial">NO. 042 / 200</span>
+            <span class="base-serial" style="opacity:0.45;">KHURJA STONEWARE</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="finale-flip-btn" onclick="toggleMugFlip('finaleMug', this)">
+        Flip to inspect hidden base ↻
+      </button>
+
+      <div class="price-compare reveal">
+        <span class="price-new">₹2,500</span>
+        <span class="price-old">₹140 factory stoneware</span>
+      </div>
+
+      <div class="finale-narration reveal">
+        <p>Same ₹140 Khurja stoneware base. One matte obsidian glaze swap. Zero new R&amp;D.</p>
+        <p><strong>I didn’t reinvent the mug. I engineered the reason to choose it.</strong></p>
+        <h2 class="finale-punch">
+          A competitor can copy your features in a week. They can’t copy a <em>belief system.</em>
+        </h2>
+      </div>
+
+      <!-- FLAGSHIP CONVERSION CARD -->
+      <div class="close-card reveal" id="contact">
+        <div class="close-head">
+          <span>START A CONVERSATION</span>
+          <span class="status-live"><span class="dot-live"></span>Direct to Shivam Swaraas</span>
+        </div>
+
+        <div class="ledger-4">
+          <div class="ledger-c"><div class="ledger-n">8+ yrs</div><div class="ledger-l">Behind NDAs</div></div>
+          <div class="ledger-c"><div class="ledger-n">3,000+</div><div class="ledger-l">Pieces Engineered</div></div>
+          <div class="ledger-c"><div class="ledger-n">40+</div><div class="ledger-l">Brands &amp; Niches</div></div>
+          <div class="ledger-c"><div class="ledger-n">+45%</div><div class="ledger-l">Organic Lift</div></div>
+        </div>
+
+        <div>
+          <h3 class="tight-h" style="font-size:clamp(1.45rem,2.6vw,2rem);margin-bottom:8px;">
+            You just watched the full process on a ₹140 mug. Imagine it applied to what you’ve actually built.
+          </h3>
+          <p class="lead" style="font-size:14.5px;color:var(--muted);">
+            Select where your brand is losing people right now—it tailors your email automatically. No scripted sales pitches. Just an honest diagnosis.
+          </p>
+        </div>
+
+        <div class="pill-row">
+          <button class="diag-pill active" onclick="pickIssue(this, 'Escaping Price Wars')">Losing on price</button>
+          <button class="diag-pill" onclick="pickIssue(this, 'Flat Organic Growth')">Flat organic growth</button>
+          <button class="diag-pill" onclick="pickIssue(this, 'Forgettable Messaging')">Forgettable messaging</button>
+          <button class="diag-pill" onclick="pickIssue(this, 'Full Brand Voice & Funnel')">Full brand voice &amp; funnel</button>
+        </div>
+
+        <a id="ctaLink" href="mailto:ShivamSwaraas@Gmail.com?subject=Brand%20Diagnosis%20%E2%80%94%20Escaping%20Price%20Wars" class="cta-btn">
+          Write to Shivam →
+        </a>
+
+        <div class="signoff-row">
+          <div class="avatar-wrap">
+            <img id="miniAvatar" class="mini-avatar" alt="Shivam Swaraas" />
+            <div id="avatarFallback" class="mini-avatar-fallback">SS</div>
+            <img id="sigPath" class="sig-reveal" src="./signature.svg" alt="Shivam Swaraas signature" onerror="this.style.display='none'" />
+          </div>
+          <div class="sub-links">
+            <a href="https://linkedin.com/in/shivamswaraas" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://linktr.ee/shivamswaraas" target="_blank" rel="noopener">Archive</a>
+          </div>
+        </div>
+
+        <div class="close-motto">
+          <span>“Algorithms change every month. Human psychology hasn’t changed in 10,000 years.”</span>
+          <span class="copyright-line">© 2026 Shivam Swaraas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    /* =====================================================================
+       OWNERSHIP & PROVENANCE MARKERS — © 2026 SHIVAM SWARAAS
+       ===================================================================== */
+    (function initProvenance() {
+      const OWNER = 'Shivam Swaraas';
+      const ALLOWED_HOSTS = ['', 'localhost', '127.0.0.1', 'shivamswaraas', 'shivamprateek'];
+
+      // 1. Console authorship watermark for anyone inspecting source
+      console.log(
+        '%c SHIVAM SWARAAS %c © 2026 Original Brand Architecture & Code. Unauthorized cloning prohibited.',
+        'background:#0C1E19;color:#E5C185;font-weight:700;padding:4px 8px;font-family:monospace;',
+        'background:#F5F1E8;color:#111111;padding:4px 8px;font-family:monospace;'
+      );
+
+      // 2. Polite clipboard attribution when large text blocks are copied
+      document.addEventListener('copy', (e) => {
+        const sel = window.getSelection().toString();
+        if (sel.length > 80 && e.clipboardData) {
+          e.clipboardData.setData('text/plain', sel + '\n\n— Original concept & copy by ' + OWNER + ' (https://linkedin.com/in/shivamswaraas)');
+          e.preventDefault();
+        }
+      });
+
+      // 3. Soft unauthorized-mirror attribution badge (allows local testing + your own domains)
+      const host = (window.location.hostname || '').toLowerCase();
+      const authorized = ALLOWED_HOSTS.some(h => h === '' ? host === '' : host.includes(h));
+      if (!authorized) {
+        const badge = document.createElement('div');
+        badge.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:9999;background:#E0462B;color:#FFF;text-align:center;font:11px/1.4 monospace;padding:6px 12px;';
+        badge.textContent = 'Original interactive walkthrough conceived & authored by ' + OWNER + ' — linkedin.com/in/shivamswaraas';
+        document.body.prepend(badge);
+      }
+    })();
+
+    /* =====================================================================
+       PORTRAIT LOADER
+       ===================================================================== */
+    const PORTRAIT_URL = 'https://raw.githubusercontent.com/shivamswaraas/Images/refs/heads/main/Cinematic%20Monochrome%20Contemplative%20Portrait.png?raw=true';
+    (function loadAvatar() {
+      const img = document.getElementById('miniAvatar');
+      if (!img || !PORTRAIT_URL) return;
+      img.onload = () => {
+        img.style.display = 'block';
+        document.getElementById('avatarFallback').style.display = 'none';
+      };
+      img.src = PORTRAIT_URL;
+    })();
+
+    /* =====================================================================
+       MUG EVOLUTION ENGINE (SYNCS WITH SCROLL PHASE)
+       ===================================================================== */
+    const mugStates = {
+      1: { cls: 'state-raw',      finish: 'Glossy White',   price: '₹349',   swatch: '#FFFFFF', unlock: false, cap: 'No story. No enemy. Forced to compete strictly on price.' },
+      2: { cls: 'state-raw',      finish: 'Glossy White',   price: '₹349',   swatch: '#FFFFFF', unlock: false, cap: 'Still plain clay—now we know the three minds who actually pay 10×.' },
+      3: { cls: 'state-raw',      finish: 'Glossy White',   price: '₹349',   swatch: '#FFFFFF', unlock: false, cap: 'White space spotted: emotional daily utility without logo ego.' },
+      4: { cls: 'state-slate',    finish: 'Matte Slate',    price: '₹1,200', swatch: '#6D7370', unlock: false, cap: 'First physical shift: generic gloss stripped away to fight visual noise.' },
+      5: { cls: 'state-charcoal', finish: 'Matte Charcoal', price: '₹2,500', swatch: '#1D2220', unlock: true,  cap: 'Exterior blank. Champagne rim added. Flip to inspect hidden base stamp.' },
+      6: { cls: 'state-charcoal', finish: 'Matte Charcoal', price: '₹2,500', swatch: '#1D2220', unlock: true,  cap: 'Identity locked. Now every sentence is cut down to match the silence.' }
+    };
+
+    function applyMugPhase(p) {
+      const st = mugStates[p];
+      if (!st) return;
+      const mug = document.getElementById('studioMug');
+      mug.classList.remove('state-raw', 'state-slate', 'state-charcoal', 'state-cult');
+      mug.classList.add(st.cls);
+      if (!st.unlock) mug.classList.remove('flipped');
+
+      document.getElementById('monPhase').textContent = 'PHASE 0' + p;
+      document.getElementById('monFinish').textContent = st.finish;
+      document.getElementById('monPrice').textContent = st.price;
+      document.getElementById('monCaption').textContent = st.cap;
+
+      const flipBtn = document.getElementById('studioFlipBtn');
+      flipBtn.classList.toggle('unlocked', st.unlock);
+      if (!st.unlock) flipBtn.textContent = 'Flip to inspect hidden base ↻';
+
+      document.getElementById('mobileSwatch').style.background = st.swatch;
+      document.getElementById('mobileState').textContent = st.finish.toUpperCase();
+      document.getElementById('mobilePrice').textContent = st.price + (p >= 5 ? ' CULT' : ' MRP');
+    }
+
+    window.toggleMugFlip = function(mugId, btn) {
+      const mug = document.getElementById(mugId);
+      const isFlipped = mug.classList.toggle('flipped');
+      btn.textContent = isFlipped ? 'Return to upright view ↺' : 'Flip to inspect hidden base ↻';
+    };
+
+    /* =====================================================================
+       PHASE 06: INTERACTIVE 4-PASS SENTENCE SCALPEL
+       ===================================================================== */
+    const passes = [
+      {
+        count: '45 WORDS // CLIENT FIRST DRAFT',
+        note: 'This is what most brands publish. A buyer’s brain deletes it in 0.3 seconds.',
+        btn: 'Make Cut 01 →',
+        isFinal: false,
+        html: '“Introducing our premium ceramic mug, carefully designed and crafted with innovative modern aesthetics. This versatile, high-quality beverage container is perfect for coffee lovers, tea enthusiasts, and anyone who appreciates the finer things in life. Available in multiple colors to match your unique personality and lifestyle.”'
+      },
+      {
+        count: 'PASS 01 // KILL THE ADJECTIVES',
+        note: 'Adjectives are the refuge of a writer with nothing specific to say.',
+        btn: 'Make Cut 02 →',
+        isFinal: false,
+        html: '“Introducing our <span class="cut">premium</span> ceramic mug, <span class="cut">carefully</span> designed and crafted with <span class="cut">innovative modern</span> aesthetics. This <span class="cut">versatile, high-quality</span> beverage container is perfect for coffee lovers, tea enthusiasts, and anyone who appreciates the finer things in life. Available in multiple colors to match your <span class="cut">unique</span> personality and lifestyle.”'
+      },
+      {
+        count: 'PASS 02 // KILL THE BROAD CATEGORIES',
+        note: 'Stop writing for everyone. Start writing for someone.',
+        btn: 'Name the Enemy →',
+        isFinal: false,
+        html: '“<span class="cut">Introducing our ceramic mug, designed and crafted with aesthetics. This beverage container is perfect for coffee lovers, tea enthusiasts, and anyone who appreciates the finer things in life. Available in multiple colors to match your personality and lifestyle.</span>”'
+      },
+      {
+        count: 'PASS 03 // NAME THE ENEMY (5 WORDS)',
+        note: 'Now we have tension. The buyer stopped skimming and felt understood.',
+        btn: 'Lock Brand Truth →',
+        isFinal: false,
+        html: '<span style="font-size:1.35em;font-weight:600;">“Your desk is noisy enough.”</span>'
+      },
+      {
+        count: '6 WORDS // LOCKED BRAND TRUTH',
+        note: 'Six words doing more commercial work than the original forty-five.',
+        btn: 'Replay from Draft ↺',
+        isFinal: true,
+        html: '“Built for minds that hate noise.”'
+      }
+    ];
+
+    let curPass = 0;
+    window.setPass = function(idx) {
+      curPass = idx;
+      const p = passes[idx];
+      const copyEl = document.getElementById('scalpelCopy');
+      copyEl.classList.toggle('final-truth', p.isFinal);
+      copyEl.innerHTML = p.html;
+      document.getElementById('scalpelCount').textContent = p.count;
+      document.getElementById('scalpelNote').textContent = p.note;
+      document.getElementById('nextCutBtn').textContent = p.btn;
+      document.querySelectorAll('.pass-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+    };
+    window.nextPass = function() { setPass((curPass + 1) % passes.length); };
+    setPass(0);
+
+    /* =====================================================================
+       PHASE 07: LIVE DELIVERABLE TABS
+       ===================================================================== */
+    window.openDep = function(idx, btn) {
+      document.querySelectorAll('.dep-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.dep-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('dep' + idx).classList.add('active');
+    };
+
+    /* =====================================================================
+       PHASE 08: COMPOUNDING SYSTEM INSPECTOR
+       ===================================================================== */
+    const sysData = [
+      [
+        { h: 'SEO // Open-Wallet Search', p: 'Ranks for high-intent evergreen queries (“minimalist matte ceramic mug”, “heavy stoneware desk mug”) via editorial essays on why cluttered desks break focus.' },
+        { h: 'AEO & GEO // AI Citations', p: 'Clean schema, material truth, and third-party editorial mentions so ChatGPT, Perplexity, and Google AI Overviews cite “Unknown” by name.' },
+        { h: 'Organic Social // Zero-Pitch', p: '30 days of quiet founder essays and aspirational desk studies before a single “buy now” link ever appears.' }
+      ],
+      [
+        { h: '5-Second Emotional Filter', p: 'The homepage hero immediately disqualifies discount shoppers while making Desk Curators and Quiet Perfectionists feel seen.' },
+        { h: 'Desire First, Specs Last', p: 'Product pages lead with weight, matte light absorption, and logo-free restraint—leaving milliliters and kiln specs cleanly below the fold.' },
+        { h: 'Curated Desk Proof', p: 'Instead of messy 5-star review walls, real customer workspace photography shows the object living naturally in frame.' }
+      ],
+      [
+        { h: 'Voice-Consistent CTAs', p: 'Buttons read “See the Weight” instead of shouting “BUY NOW”—keeping the buyer inside the exact calm mood that earned their trust.' },
+        { h: 'Real Scarcity, Zero Gimmicks', p: 'Numbered 200-piece Khurja batches (No. 042/200) create genuine demand without fake countdown timers or pop-up coupon wheels.' },
+        { h: 'Frictionless Checkout', p: 'Zero surprise fees, zero upsell clutter—protecting margin and brand dignity all the way through payment.' }
+      ],
+      [
+        { h: 'The Video-Call Trigger', p: 'The matte obsidian mug sits quietly on camera every day. Zero visible logo forces colleagues to ask: “Where is that mug from?”' },
+        { h: 'The Flip-Over Story', p: 'The owner says “Unknown” and flips the base to show the serial stamp—retelling the brand philosophy organically.' },
+        { h: 'Gift-Economy Engine', p: 'The unbleached insert (“Put your phone face down.”) turns every first-time buyer into a repeat corporate and personal gifter.' }
+      ]
+    ];
+
+    window.selectSys = function(idx, btn) {
+      if (btn) {
+        document.querySelectorAll('.sys-node').forEach(n => n.classList.remove('active'));
+        btn.classList.add('active');
+      }
+      document.getElementById('sysDetail').innerHTML = sysData[idx]
+        .map(col => `<div class="sys-col"><h4>${col.h}</h4><p>${col.p}</p></div>`)
+        .join('');
+    };
+    selectSys(0);
+
+    /* =====================================================================
+       PHASE 09: DIAGNOSIS PILLS & MAILTO ROUTING
+       ===================================================================== */
+    window.pickIssue = function(btn, topic) {
+      document.querySelectorAll('.diag-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('ctaLink').href =
+        'mailto:ShivamSwaraas@Gmail.com?subject=' + encodeURIComponent('Brand Diagnosis — ' + topic);
+    };
+
+    /* =====================================================================
+       SCROLL CHOREOGRAPHY, PHASE TRACKER & DARK TOP-BAR SYNC
+       ===================================================================== */
+    const sections = document.querySelectorAll('[data-phase]');
+    const dots = document.querySelectorAll('.hud-dot');
+    const hudLabel = document.getElementById('hudLabel');
+    const topBar = document.getElementById('topBar');
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const el = document.getElementById(dot.dataset.target);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    const phaseObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const p = Number(entry.target.dataset.phase);
+        hudLabel.textContent = entry.target.dataset.label;
+        dots.forEach((d, idx) => {
+          const num = idx + 1;
+          d.classList.toggle('active', num === p);
+          d.classList.toggle('passed', num < p);
+        });
+        if (p >= 1 && p <= 6) applyMugPhase(p);
+        topBar.classList.toggle('dark-mode', p === 7 || p === 9);
+      });
+    }, { rootMargin: '-32% 0px -48% 0px', threshold: 0 });
+
+    sections.forEach(sec => phaseObserver.observe(sec));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          if (entry.target.id === 'contact') {
+            const sig = document.getElementById('sigPath');
+            if (sig) setTimeout(() => sig.classList.add('drawn'), 300);
+          }
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
